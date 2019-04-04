@@ -10,7 +10,8 @@ phases:
       - apt-get -y install wget
       - wget https://releases.hashicorp.com/terraform/0.8.5/terraform_0.8.5_linux_386.zip
       - unzip terraform_0.8.5_linux_386.zip
-      - terraform
+      - mv terraform /usr/local/bin/
+      - export PATH=$PATH:/terraform-path/
   pre_build:
     commands:
       - echo "Started building the package"
